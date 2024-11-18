@@ -39,7 +39,7 @@ volumes:
     driver: local
   temp_data:
     driver: local
-    driver_opts:
-      type: none
-      device: $PWD/data
-      o: bind
+    # driver_opts:
+    #   type: none
+    #   device: $PWD/data
+    #   o: bind
