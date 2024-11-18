@@ -14,7 +14,7 @@ services:
     image: cloudreve/cloudreve:latest
     restart: unless-stopped
     ports:
-      - "5212:5212"
+      - "35212:5212"
     volumes:
       - temp_data:/data
       - ./cloudreve/uploads:/cloudreve/uploads
@@ -33,13 +33,9 @@ services:
       - RPC_PORT=6800
     volumes:
       - ./aria2/config:/config
-      # - temp_data:/data
+      - temp_data:/data
 volumes:
   redis_data:
     driver: local
   temp_data:
     driver: local
-    # driver_opts:
-    #   type: none
-    #   device: $PWD/data
-    #   o: bind
