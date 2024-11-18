@@ -33,7 +33,7 @@ services:
       - RPC_PORT=6800
     volumes:
       - ./aria2/config:/config
-      - temp_data:/data
+      # - temp_data:/data
 volumes:
   redis_data:
     driver: local
