@@ -16,7 +16,7 @@ services:
     ports:
       - "35212:5212"
     volumes:
-      - temp_data:/data
+      # - temp_data:/data
       - ./cloudreve/uploads:/cloudreve/uploads
       - ./cloudreve/conf.ini:/cloudreve/conf.ini
       - ./cloudreve/cloudreve.db:/cloudreve/cloudreve.db
@@ -33,7 +33,7 @@ services:
       - RPC_PORT=6800
     volumes:
       - ./aria2/config:/config
-      - temp_data:/data
+      # - temp_data:/data
 volumes:
   redis_data:
     driver: local
